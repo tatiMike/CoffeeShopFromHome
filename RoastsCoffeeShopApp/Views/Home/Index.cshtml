@@ -1,1 +1,27 @@
-﻿
+﻿@model ShopDBContext
+
+<h1>Store</h1>
+
+<table>
+    <tr>
+        <th><h5 class="col-12">Coffee</h5></th>
+        <th><h5 class="col-12">Description</h5></th>
+        <th><h5 class="col-12">Quantity</h5></th>
+        <th><h5 class="col-12">Price</h5></th>
+        <th><h5 class="col-12">Purchase</h5></th>
+    </tr>
+    @foreach (ItemsCoffee items in Model.ItemsCoffee)
+    {
+        <tr>
+            <td class="bg-dark table-borderless"><h6 class="text-white col-12">@items.Name</h6></td>
+            <td class="bg-light table-bordered"><h6 class="col-12">@items.Description</h6></td>
+            <td class="bg-dark table-borderless"><h6 class="text-white col-12">@items.Quantity</h6></td>
+            <td class="bg-light table-bordered"><h6 class="card-columns col-12">@items.Price</h6></td>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <td class="table-borderless"><button class="form-control badge badge-pill badge-success">Buy</button></td>
+            }
+        </tr>
+
+    }
+</table>

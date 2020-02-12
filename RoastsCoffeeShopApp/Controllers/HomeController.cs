@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using RoastsCoffeeShopApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RoastsCoffeeShopApp.Controllers
 {
@@ -18,18 +19,16 @@ namespace RoastsCoffeeShopApp.Controllers
         {
             _logger = logger;
         }
-
         public IActionResult Index()
-        {
-            return View();
-        }
-        public IActionResult Shop()
         {
             ShopDBContext db = new ShopDBContext();
             var itemList = new List<ItemsCoffee>();
             return View(db);
         }
-
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

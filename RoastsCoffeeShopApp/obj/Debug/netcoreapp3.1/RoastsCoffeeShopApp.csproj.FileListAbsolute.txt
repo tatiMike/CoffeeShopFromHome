@@ -159,4 +159,4 @@ C:\Users\14192\source\repos\RoastsCoffeeShopApp\RoastsCoffeeShopApp\obj\Debug\ne
 C:\Users\14192\source\repos\RoastsCoffeeShopApp\RoastsCoffeeShopApp\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
 C:\Users\14192\source\repos\RoastsCoffeeShopApp\RoastsCoffeeShopApp\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\14192\source\repos\RoastsCoffeeShopApp\RoastsCoffeeShopApp\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
-C:\Users\14192\source\repos\RoastsCoffeeShopApp\RoastsCoffeeShopApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Shop.cshtml.g.cs
+C:\Users\14192\source\repos\RoastsCoffeeShopApp\RoastsCoffeeShopApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\AboutUs.cshtml.g.cs
