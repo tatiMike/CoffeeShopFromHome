@@ -1,14 +1,17 @@
-﻿@model ShopDBContext
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model ShopDBContext
 
-<h1>Store</h1>
+<h1 class="bg-dark text-white col-2">STOREFRONT</h1>
 
 <table>
-    <tr>
-        <th><h5 class="col-12">Coffee</h5></th>
-        <th><h5 class="col-12">Description</h5></th>
-        <th><h5 class="col-12">Quantity</h5></th>
-        <th><h5 class="col-12">Price</h5></th>
-        <th><h5 class="col-12">Purchase</h5></th>
+    <tr class="form-group">
+        <th><h4 class="bg-dark text-white col-auto">Coffee</h4></th>
+        <th><h4 class="bg-light text-dark col-auto">Description</h4></th>
+        <th><h4 class="bg-dark text-white col-12">Quantity</h4></th>
+        <th><h4 class="bg-light text-dark col-12">Price</h4></th>
+        <th><h4 class="bg-dark text-white col-12">Purchase</h4></th>
     </tr>
     @foreach (ItemsCoffee items in Model.ItemsCoffee)
     {
@@ -16,7 +19,7 @@
             <td class="bg-dark table-borderless"><h6 class="text-white col-12">@items.Name</h6></td>
             <td class="bg-light table-bordered"><h6 class="col-12">@items.Description</h6></td>
             <td class="bg-dark table-borderless"><h6 class="text-white col-12">@items.Quantity</h6></td>
-            <td class="bg-light table-bordered"><h6 class="card-columns col-12">@items.Price</h6></td>
+            <td class="bg-light table-bordered"><h6 class="card-columns col-12">$@items.Price</h6></td>
             @if (User.Identity.IsAuthenticated)
             {
                 <td class="table-borderless"><button class="form-control badge badge-pill badge-success">Buy</button></td>

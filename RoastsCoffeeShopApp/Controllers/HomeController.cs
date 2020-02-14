@@ -21,10 +21,26 @@ namespace RoastsCoffeeShopApp.Controllers
         }
         public IActionResult Index()
         {
-            ShopDBContext db = new ShopDBContext();
-            var itemList = new List<ItemsCoffee>();
-            return View(db);
+            if (ModelState.IsValid)
+            {
+                ShopDBContext db = new ShopDBContext();
+                var itemList = new List<ItemsCoffee>();
+                AspNetUsers confirmedUsers = new AspNetUsers();
+                if (confirmedUsers == null)
+                {
+                    return HttpNotFound();
+                }
+                db.SaveChanges();
+                return View(db);
+            }
+            return View("Login");
         }
+
+        private IActionResult HttpNotFound()
+        {
+            throw new NotImplementedException();
+        }
+
         public IActionResult AboutUs()
         {
             return View();

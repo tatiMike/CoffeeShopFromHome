@@ -43,12 +43,12 @@ namespace RoastsCoffeeShopApp
                 options =>
                 options.SignIn.RequireConfirmedEmail = true
                 );
+            
+            services.AddSession();
 
             services.AddControllersWithViews();
 
             services.AddRazorPages();
-
-            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

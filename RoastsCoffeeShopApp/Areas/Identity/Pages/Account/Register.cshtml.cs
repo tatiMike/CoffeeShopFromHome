@@ -50,9 +50,9 @@ namespace RoastsCoffeeShopApp.Areas.Identity.Pages.Account
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Compare("Email", ErrorMessage = "The email and confirmation email do not match.")]
-            [Display(Name = "Confirm email")]
             [EmailAddress]
+            [Display(Name = "Confirm email")]
+            [Compare("Email", ErrorMessage = "The email and confirmation email do not match.")]
             public string ConfirmEmail { get; set; }
 
             [Required]
